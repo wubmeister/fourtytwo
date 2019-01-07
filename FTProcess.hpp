@@ -9,16 +9,16 @@
 #ifndef FTProcess_hpp
 #define FTProcess_hpp
 
-#include "FTRender/FTRenderStrategyInterface.hpp"
+#include "FTRender/IFTRenderStrategy.hpp"
 
 class FTProcess
 {
 public:
-    FTProcess(FTRenderStrategyInterface *rs);
+    FTProcess(IFTRenderStrategy *rs);
     void draw();
     
 private:
-    FTRenderStrategyInterface *m_pRenderStrategy;
+    IFTRenderStrategy *m_pRenderStrategy;
 };
 
 #endif /* FTProcess_hpp */

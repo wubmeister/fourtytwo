@@ -8,7 +8,7 @@
 
 #include "FTProcess.hpp"
 
-FTProcess::FTProcess(FTRenderStrategyInterface *rs) : m_pRenderStrategy(rs) {}
+FTProcess::FTProcess(IFTRenderStrategy *rs) : m_pRenderStrategy(rs) {}
 
 void FTProcess::draw()
 {

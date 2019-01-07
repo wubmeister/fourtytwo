@@ -9,10 +9,10 @@
 #ifndef FTCGRenderStrategy_hpp
 #define FTCGRenderStrategy_hpp
 
-#include "../FTRender/FTRenderStrategyInterface.hpp"
+#include "../FTRender/IFTRenderStrategy.hpp"
 #include <ApplicationServices/ApplicationServices.h>
 
-class FTCGRenderStrategy : public FTRenderStrategyInterface
+class FTCGRenderStrategy : public IFTRenderStrategy
 {
 public:
     FTCGRenderStrategy(CGContextRef context, float height);
