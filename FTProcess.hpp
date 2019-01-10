@@ -16,7 +16,7 @@ class FTProcess
 public:
     FTProcess(IFTRenderStrategy *rs);
     void draw();
-    
+
 private:
     IFTRenderStrategy *m_pRenderStrategy;
 };
