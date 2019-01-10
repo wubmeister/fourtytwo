@@ -8,12 +8,11 @@
 
 #include "FTCocoa.hpp"
 #include "FTCGRenderStrategy.hpp"
-#include "../FTProcess.hpp"
 
 FTProcess **g_pProcesses;
 int g_nNumProcesses = 0;
 
-FTProcessRef FTCocoaCreateProcess(void *ctx, float height)
+extern "C" FTProcessRef FTCocoaCreateProcess(void *ctx, float height)
 {
     CGContextRef context = (CGContextRef)ctx;
     FTCGRenderStrategy *strategy = new FTCGRenderStrategy(context, height);
@@ -22,7 +21,7 @@ FTProcessRef FTCocoaCreateProcess(void *ctx, float height)
     return 0;
 }
 
-void FTCocoaDraw(FTProcessRef process)
+extern "C" void FTCocoaDraw(FTProcessRef process)
 {
     if (process < g_nNumProcesses) {
         printf("%X is not a valid process reference\n", process);

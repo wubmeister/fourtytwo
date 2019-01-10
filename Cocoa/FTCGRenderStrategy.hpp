@@ -9,8 +9,8 @@
 #ifndef FTCGRenderStrategy_hpp
 #define FTCGRenderStrategy_hpp
 
-#include "../FTRender/IFTRenderStrategy.hpp"
 #include <ApplicationServices/ApplicationServices.h>
+#include "../FTRender/IFTRenderStrategy.hpp"
 
 class FTCGRenderStrategy : public IFTRenderStrategy
 {
